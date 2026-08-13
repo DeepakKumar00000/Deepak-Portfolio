@@ -42,7 +42,7 @@ export const portfolioData = {
       "Multer",
       "Bcrypt",
       "Nodemailer",
-      "Node-cron",
+      "Node-cron","OAuth 2.0",
     ],
 
     database: [
