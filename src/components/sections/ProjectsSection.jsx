@@ -64,7 +64,7 @@ const ProjectCard = ({ project, index }) => {
       {/* Project Details */}
       <div className="lg:w-3/5 p-8 md:p-12 flex flex-col relative z-10">
         <div className="mb-6">
-          <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-cyan-500 transition-all duration-300">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-cyan-500 transition-all duration-300">
             {project.name.split("—")[0].trim()}
           </h3>
           <p className="text-primary-600 font-medium">
@@ -72,7 +72,7 @@ const ProjectCard = ({ project, index }) => {
           </p>
         </div>
 
-        <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+        <p className="text-gray-600 mb-8 text-base md:text-lg leading-relaxed">
           {project.description}
         </p>
 

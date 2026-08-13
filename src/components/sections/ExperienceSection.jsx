@@ -56,15 +56,15 @@ const ExperienceSection = () => {
                 
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6 gap-4 relative z-10">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                    <h3 className="text-lg md:text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
                       {exp.role}
                     </h3>
-                    <div className="flex items-center text-lg font-medium text-gray-700 mt-2">
+                    <div className="flex items-center text-base md:text-lg font-medium text-gray-700 mt-2">
                       <Briefcase size={18} className="mr-2 text-primary-500" />
                       {exp.company}
                     </div>
                   </div>
-                  <div className="flex flex-col items-start md:items-end text-sm text-gray-600 space-y-2">
+                  <div className="flex flex-col items-start md:items-end text-xs md:text-sm text-gray-600 space-y-2">
                     <div className="flex items-center bg-white/80 px-4 py-1.5 rounded-full border border-gray-200 shadow-sm font-medium">
                       <Calendar size={14} className="mr-2 text-primary-500" />
                       {exp.duration}

@@ -8,6 +8,30 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    
+    // Close menu first
+    setIsMobileMenuOpen(false);
+
+    if (element) {
+      setTimeout(() => {
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }, 100);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -51,10 +75,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <a
             href="#"
-            className="text-xl font-bold text-gray-900 tracking-tight group"
+            className="text-2xl font-bold text-gray-900 tracking-tight group"
           >
-            {portfolioData.personal.name.split(" ")[0]}
-            <span className="text-primary-600 transition-colors group-hover:text-cyan-500"> Portfolio</span>
+            {/* {portfolioData.personal.name.split(" ")[0]} */}
+            <span className="text-primary-600 transition-colors group-hover:text-cyan-600"> Portfolio</span>
           </a>
 
           {/* Desktop Nav */}
@@ -65,6 +89,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="relative group text-sm font-medium transition-colors interactive"
                   style={{ color: isActive ? '#0284c7' : '#4b5563' }}
                 >
@@ -114,17 +139,14 @@ const Navbar = () => {
           >
             <div className="py-4 px-4 flex flex-col space-y-4">
               {navLinks.map((link, i) => (
-                <motion.a
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-700 hover:text-primary-600 font-medium block px-2 py-2 rounded-md hover:bg-primary-50 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-primary-600 font-medium block px-2 py-2 rounded-md hover:bg-primary-50 transition-colors cursor-pointer"
+                  onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.name}
-                </motion.a>
+                </a>
               ))}
             </div>
           </motion.div>

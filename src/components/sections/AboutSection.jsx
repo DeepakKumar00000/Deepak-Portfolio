@@ -86,7 +86,7 @@ const AboutSection = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-transparent mix-blend-overlay z-10 transition-opacity duration-300 group-hover:opacity-100 opacity-0"></div>
             
             <img
-              src="/deepak image.jpeg"
+              src="/Deepak0.jpeg"
               alt={portfolioData.personal.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               style={{ transform: "translateZ(30px)" }}
@@ -97,7 +97,7 @@ const AboutSection = () => {
               className="absolute bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md p-6 border-t border-white/50"
               style={{ transform: "translateZ(50px)" }}
             >
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                 {portfolioData.personal.name}
               </h3>
               <p className="text-primary-600 font-medium mt-1">
@@ -114,19 +114,19 @@ const AboutSection = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <motion.span variants={itemVariants} className="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 text-primary-600 text-sm font-semibold mb-5 border border-primary-100 shadow-sm">
+          <motion.span variants={itemVariants} className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary-50 text-primary-600 text-xs md:text-sm font-semibold mb-5 border border-primary-100 shadow-sm">
             Full Stack Developer
           </motion.span>
 
-          <motion.h3 variants={itemVariants} className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          <motion.h3 variants={itemVariants} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
             Building scalable solutions for real-world problems.
           </motion.h3>
 
-          <motion.p variants={itemVariants} className="text-lg text-gray-600 leading-relaxed mb-5">
+          <motion.p variants={itemVariants} className="text-base sm:text-lg text-gray-600 leading-relaxed mb-5">
             {portfolioData.personal.summary}
           </motion.p>
 
-          <motion.p variants={itemVariants} className="text-lg text-gray-600 leading-relaxed mb-8">
+          <motion.p variants={itemVariants} className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8">
             I specialize in{' '}
             <span className="font-semibold text-gray-800">{portfolioData.skills.frontend.slice(0, 3).join(', ')}</span>
             {' '}on the frontend, and{' '}
