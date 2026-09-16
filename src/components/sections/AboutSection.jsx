@@ -86,7 +86,7 @@ const AboutSection = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-transparent mix-blend-overlay z-10 transition-opacity duration-300 group-hover:opacity-100 opacity-0"></div>
             
             <img
-              src="/Deepak0.jpeg"
+              src="/Deepak.jpeg"
               alt={portfolioData.personal.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               style={{ transform: "translateZ(30px)" }}
