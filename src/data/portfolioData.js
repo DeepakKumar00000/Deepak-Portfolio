@@ -7,7 +7,7 @@ export const portfolioData = {
     location: "Hoshiarpur, Punjab",
     email: "deepthakur10404@gmail.com",
     phone: "+91-7009657233",
-    linkedin: "www.linkedin.com/in/deepak-kumar-0856542b7",
+    linkedin: "www.linkedin.com/in/deepak-kumar10404",
     github: "github.com/DeepakKumar00000",
 
     summary:
