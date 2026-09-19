@@ -780,7 +780,7 @@ const HeroSection = () => {
 
   {/* RESUME */}
   <a
-    href="/resume.pdf"
+    href="/Deepak Resume.pdf"
     download="Deepak-Kumar-Resume.pdf"
     className="
       interactive
